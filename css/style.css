@@ -889,3 +889,176 @@ button:focus-visible {
 
     outline-offset: 3px;
 }
+/* =========================================
+   MENU PRINCIPAL — GOTA D´ SOL 2.0
+   ========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(10, 31, 61, 0.06);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* LOGOTIPO */
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--navy);
+    white-space: nowrap;
+}
+
+.logo span {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logo small {
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+/* NAVEGAÇÃO */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.navigation a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 13px;
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 7px;
+    transition: all 0.25s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.navigation a:hover {
+    color: var(--navy);
+    background: var(--blue-light);
+}
+
+/* ITEM ATIVO */
+
+.navigation a.active {
+    color: var(--navy);
+}
+
+/* LINHA DOURADA DO ITEM ATIVO */
+
+.navigation a.active::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    right: 13px;
+    bottom: 3px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 2px;
+}
+
+/* BOTÃO SOLICITAR COTAÇÃO */
+
+.btn-header {
+    flex-shrink: 0;
+    padding: 11px 19px !important;
+    background: var(--navy);
+    color: var(--white) !important;
+    border: 1px solid var(--navy);
+    border-radius: 7px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-header:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy) !important;
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   MENU — TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .nav-container {
+        gap: 15px;
+    }
+
+    .navigation {
+        gap: 2px;
+    }
+
+    .navigation a {
+        padding: 9px 8px;
+        font-size: 0.85rem;
+    }
+
+    .btn-header {
+        padding: 10px 13px !important;
+        font-size: 0.82rem;
+    }
+}
+
+/* =========================================
+   MENU — TELEMÓVEL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--border);
+        padding-top: 10px;
+    }
+
+    .navigation a {
+        padding: 7px 9px;
+        font-size: 0.8rem;
+    }
+
+    .btn-header {
+        padding: 9px 12px !important;
+        font-size: 0.78rem;
+    }
+}
