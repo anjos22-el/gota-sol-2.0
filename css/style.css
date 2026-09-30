@@ -66,8 +66,6 @@ html{
 }
 
 body{
-
-    body{
     font-family:
         "Manrope",
         "Segoe UI",
@@ -2446,269 +2444,35 @@ summary:focus-visible{
 }
 
 
-@media(max-width:600px){
-
-    .container{
-
-        width:
-            min(
-                var(--container),
-                calc(100% - 30px)
-            );
-
-    }
-
-    .nav-container{
-
-        min-height:68px;
-
-    }
-
-    .navigation{
-
-        top:68px;
-
-    }
-
-
-    .hero{
-
-        padding:
-            62px 0 90px;
-
-    }
-
-    .hero-copy h1{
-
-        font-size:
-            clamp(
-                2.45rem,
-                12vw,
-                3.4rem
-            );
-
-        letter-spacing:
-            -1.8px;
-
-    }
-
-    .hero-description{
-
-        font-size:.86rem;
-
-    }
-
-    .hero-actions{
-
-        flex-direction:column;
-
-    }
-
-    .hero-actions .btn{
-
-        width:100%;
-
-    }
-
-    .hero-trust{
-
-        flex-direction:column;
-
-        gap:8px;
-
-    }
-
-
-    .hero-visual{
-
-        min-height:330px;
-
-    }
-
-    .orbit-one{
-
-        width:300px;
-        height:300px;
-
-    }
-
-    .orbit-two{
-
-        width:360px;
-        height:360px;
-
-    }
-
-    .travel-card{
-
-        width:100%;
-
-        max-width:360px;
-
-        padding:22px;
-
-        transform:none;
-
-    }
-
-    .floating-badge{
-
-        right:50%;
-        bottom:-3px;
-
-        transform:
-            translateX(50%);
-
-    }
-
-
-    .hero-bottom-content{
-
-        justify-content:center;
-
-        text-align:center;
-
-    }
-
-    .hero-bottom-content > span:first-child,
-    .hero-bottom-content a{
-
-        display:none;
-
-    }
-
-
-    .section{
-
-        padding:
-            75px 0;
-
-    }
-
-    .section-heading h2,
-    .about-content h2,
-    .quote-content h2{
-
-        font-size:
-            2rem;
-
-    }
-
-
-    .services-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .services-footer{
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-        text-align:center;
-
-    }
-
-
-    .steps{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .process-note{
-
-        flex-direction:column;
-
-        padding:
-            18px;
-
-    }
-
-
-    .quote-section{
-
-        padding:
-            70px 0;
-
-    }
-
-    .quote-content{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:30px;
-
-    }
-
-    .btn-whatsapp{
-
-        width:100%;
-
-    }
-
-
-    .contact-card{
-
-        padding:
-            20px;
-
-    }
-
-
-    .whatsapp-float{
-
-        right:16px;
-        bottom:16px;
-
-        width:50px;
-        height:50px;
-
-    }
-
+/* ================= POLISH / ROBUSTNESS ================= */
+
+::selection{
+    color:var(--white);
+    background:var(--navy);
 }
 
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
 
-@media(max-width:400px){
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
+}
 
-    .logo-text strong{
-
-        font-size:.86rem;
-
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior:auto;
     }
 
-    .logo-mark{
-
-        width:36px;
-        height:36px;
-
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+        scroll-behavior:auto !important;
     }
-
-    .hero-copy h1{
-
-        font-size:2.35rem;
-
-    }
-
-    .travel-card{
-
-        padding:19px;
-
-    }
-
-    .route{
-
-        grid-template-columns:
-            1fr
-            45px
-            1fr;
-
-    }
-
 }
