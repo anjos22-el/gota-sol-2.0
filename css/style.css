@@ -163,30 +163,36 @@ a{text-decoration:none;color:inherit}
     color:var(--navy);
 }
 
-/* ================= HERO ================= */
+```css
+/* ================= HERO V2 COMPACTO ================= */
 
 .hero{
     position:relative;
     overflow:hidden;
-    min-height:650px;
+    min-height:570px;
     display:flex;
     align-items:center;
-    padding:95px 0;
+    padding:78px 0 88px;
     color:var(--white);
+
     background:
-        radial-gradient(circle at 85% 25%,rgba(198,162,74,.18),transparent 28%),
-        linear-gradient(120deg,#041326 0%,#0a2445 52%,#174f82 100%);
+        radial-gradient(circle at 78% 20%,rgba(198,162,74,.18),transparent 24%),
+        radial-gradient(circle at 15% 85%,rgba(23,79,130,.32),transparent 28%),
+        linear-gradient(125deg,#031225 0%,#071b36 48%,#103d68 100%);
 }
 
 .hero::before{
     content:"";
     position:absolute;
-    width:520px;
-    height:520px;
-    right:-250px;
-    top:-220px;
-    border:1px solid rgba(198,162,74,.25);
+    width:620px;
+    height:620px;
+    right:-360px;
+    top:-270px;
+    border:1px solid rgba(198,162,74,.20);
     border-radius:50%;
+    box-shadow:
+        0 0 0 55px rgba(255,255,255,.015),
+        0 0 0 110px rgba(255,255,255,.01);
 }
 
 .hero::after{
@@ -194,38 +200,88 @@ a{text-decoration:none;color:inherit}
     position:absolute;
     width:330px;
     height:330px;
-    right:-150px;
-    top:-120px;
-    border:1px solid rgba(255,255,255,.08);
+    left:-220px;
+    bottom:-230px;
+    border:1px solid rgba(255,255,255,.06);
     border-radius:50%;
+}
+
+.hero-orbit{
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+}
+
+.hero-orbit-one{
+    width:14px;
+    height:14px;
+    right:15%;
+    top:23%;
+    background:var(--gold);
+    box-shadow:
+        0 0 0 7px rgba(198,162,74,.09),
+        0 0 25px rgba(198,162,74,.30);
+}
+
+.hero-orbit-two{
+    width:7px;
+    height:7px;
+    left:48%;
+    bottom:18%;
+    background:rgba(255,255,255,.60);
+    box-shadow:0 0 0 6px rgba(255,255,255,.05);
 }
 
 .hero-content{
     position:relative;
-    z-index:2;
+    z-index:3;
     display:grid;
-    grid-template-columns:1.18fr .82fr;
-    gap:70px;
+    grid-template-columns:1.12fr .88fr;
+    gap:55px;
     align-items:center;
 }
 
-.hero-text{max-width:720px}
+.hero-text{
+    max-width:680px;
+}
 
 .hero-text .eyebrow{
-    display:inline-block;
-    margin-bottom:18px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
     color:var(--gold-light);
-    font-size:.74rem;
-    font-weight:800;
-    letter-spacing:2px;
+    font-size:.68rem;
+    font-weight:850;
+    letter-spacing:2.2px;
+}
+
+.hero-text .eyebrow::before{
+    content:"";
+    width:25px;
+    height:2px;
+    background:var(--gold);
+}
+
+.hero-kicker{
+    margin-bottom:14px;
+    color:#9fb5ca;
+    font-size:.67rem;
+    font-weight:700;
+    letter-spacing:1.2px;
+}
+
+.hero-kicker span{
+    color:var(--gold);
+    padding:0 3px;
 }
 
 .hero-text h1{
-    margin-bottom:22px;
-    max-width:700px;
-    font-size:clamp(40px,5vw,64px);
-    line-height:1.05;
-    letter-spacing:-1.8px;
+    max-width:680px;
+    margin-bottom:18px;
+    font-size:clamp(40px,5vw,62px);
+    line-height:1.03;
+    letter-spacing:-2.2px;
 }
 
 .hero-text h1 span{
@@ -234,88 +290,454 @@ a{text-decoration:none;color:inherit}
 }
 
 .hero-text p{
-    max-width:650px;
-    margin-bottom:30px;
-    color:#dbe6f2;
-    font-size:1.04rem;
-    line-height:1.8;
+    max-width:590px;
+    margin-bottom:25px;
+    color:#d6e2ee;
+    font-size:.94rem;
+    line-height:1.7;
 }
 
-.hero-text p strong{color:var(--white)}
+.hero-text p strong{
+    color:var(--white);
+}
 
 .hero-buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:13px;
+    gap:11px;
+}
+
+.hero-buttons .btn{
+    min-height:48px;
+    padding:0 19px;
+    font-size:.84rem;
+}
+
+.btn-arrow{
+    margin-left:6px;
+    font-size:1rem;
+    transition:transform .2s ease;
+}
+
+.btn-primary:hover .btn-arrow{
+    transform:translateX(4px);
 }
 
 .hero-trust{
     display:flex;
     flex-wrap:wrap;
-    gap:10px 22px;
-    margin-top:28px;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.16);
+    gap:8px 17px;
+    margin-top:21px;
+    padding-top:15px;
+    border-top:1px solid rgba(255,255,255,.12);
 }
 
 .hero-trust span{
-    color:#dce5ef;
-    font-size:.8rem;
+    color:#cbd9e7;
+    font-size:.72rem;
     font-weight:600;
 }
 
-.hero-card{
-    padding:40px 34px;
-    background:rgba(255,255,255,.98);
-    color:var(--dark);
-    border:1px solid rgba(255,255,255,.7);
-    border-top:4px solid var(--gold);
-    border-radius:16px;
-    box-shadow:0 25px 65px rgba(0,0,0,.25);
+.hero-trust b{
+    margin-right:4px;
+    color:var(--gold);
 }
 
-.hero-card-icon{
-    width:54px;
-    height:54px;
+/* ================= HERO CARD ================= */
+
+.hero-visual{
+    position:relative;
+    min-height:365px;
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-bottom:20px;
-    background:var(--blue-soft);
-    color:var(--navy);
-    border-radius:50%;
-    font-size:1.5rem;
+}
+
+.hero-card{
+    position:relative;
+    width:min(100%,360px);
+    padding:25px;
+    background:
+        linear-gradient(145deg,rgba(255,255,255,.99),rgba(242,247,251,.98));
+    color:var(--dark);
+    border:1px solid rgba(255,255,255,.72);
+    border-top:3px solid var(--gold);
+    border-radius:18px;
+    box-shadow:0 24px 55px rgba(0,0,0,.25);
+    transform:rotate(1deg);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.hero-card:hover{
+    transform:rotate(0deg) translateY(-4px);
+    box-shadow:0 28px 65px rgba(0,0,0,.30);
+}
+
+.hero-card-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:23px;
 }
 
 .hero-card-label{
-    display:block;
-    margin-bottom:10px;
     color:var(--gold);
-    font-size:.73rem;
+    font-size:.62rem;
     font-weight:850;
     letter-spacing:1.4px;
 }
 
-.hero-card h3{
-    margin-bottom:13px;
-    color:var(--navy);
-    font-size:1.45rem;
-    line-height:1.3;
+.hero-card-plane{
+    width:36px;
+    height:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--navy);
+    color:var(--gold-light);
+    border-radius:50%;
+    font-size:.95rem;
+    box-shadow:0 7px 15px rgba(7,27,54,.17);
 }
 
-.hero-card p{
+.hero-route{
+    display:grid;
+    grid-template-columns:1fr 55px 1fr;
+    align-items:center;
+    gap:6px;
+}
+
+.route-point{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+}
+
+.route-point .route-dot{
+    width:9px;
+    height:9px;
+    margin-top:4px;
+    flex:0 0 auto;
+    border:3px solid var(--navy);
+    border-radius:50%;
+}
+
+.route-destination .route-dot{
+    border-color:var(--gold);
+}
+
+.route-point small{
+    display:block;
+    margin-bottom:2px;
+    color:#8a98a8;
+    font-size:.56rem;
+    font-weight:800;
+    letter-spacing:.9px;
+}
+
+.route-point strong{
+    display:block;
+    color:var(--navy);
+    font-size:.80rem;
+}
+
+.route-line{
+    position:relative;
+    height:1px;
+    background:#ccd7e2;
+    text-align:center;
+}
+
+.route-line span{
+    position:relative;
+    top:-11px;
+    display:inline-flex;
+    width:23px;
+    height:23px;
+    align-items:center;
+    justify-content:center;
+    background:var(--white);
+    color:var(--gold);
+    border:1px solid #dce4eb;
+    border-radius:50%;
+    font-size:.55rem;
+}
+
+.hero-card-divider{
+    height:1px;
+    margin:22px 0 16px;
+    background:#e2e8ef;
+}
+
+.hero-card-services{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
     margin-bottom:20px;
-    color:var(--gray);
-    font-size:.92rem;
+}
+
+.hero-card-services span{
+    padding:8px 9px;
+    background:#f1f5f8;
+    color:#425466;
+    border-radius:7px;
+    font-size:.66rem;
+    font-weight:700;
 }
 
 .hero-card-link{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:12px;
+    border-top:1px solid #e2e8ef;
     color:var(--navy);
-    font-weight:800;
-    transition:.2s;
+    font-size:.76rem;
+    font-weight:850;
+    text-decoration:none;
 }
 
-.hero-card-link:hover{color:var(--gold)}
+.hero-card-link span{
+    color:var(--gold);
+    font-size:.95rem;
+    transition:transform .2s ease;
+}
+
+.hero-card-link:hover span{
+    transform:translateX(4px);
+}
+
+/* ================= FLOATING CARD ================= */
+
+.hero-floating-card{
+    position:absolute;
+    right:-2px;
+    bottom:28px;
+    z-index:4;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    min-width:170px;
+    padding:10px 13px;
+    background:rgba(255,255,255,.97);
+    border:1px solid rgba(255,255,255,.75);
+    border-radius:11px;
+    box-shadow:0 15px 35px rgba(0,0,0,.20);
+}
+
+.floating-icon{
+    width:30px;
+    height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eaf6ef;
+    color:#16804a;
+    border-radius:50%;
+    font-size:.78rem;
+    font-weight:900;
+}
+
+.hero-floating-card strong,
+.hero-floating-card small{
+    display:block;
+}
+
+.hero-floating-card strong{
+    color:var(--navy);
+    font-size:.68rem;
+}
+
+.hero-floating-card small{
+    margin-top:2px;
+    color:#7a8795;
+    font-size:.60rem;
+}
+
+/* ================= HERO BOTTOM ================= */
+
+.hero-bottom{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:4;
+    border-top:1px solid rgba(255,255,255,.08);
+    background:rgba(2,13,27,.22);
+}
+
+.hero-bottom-content{
+    min-height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    color:#aebfd0;
+    font-size:.67rem;
+}
+
+.hero-bottom-mark{
+    color:#d7e0e9;
+    font-weight:800;
+    letter-spacing:.9px;
+}
+
+.hero-bottom-mark b{
+    color:var(--gold);
+}
+```
+
+### 2. E ajuste também o bloco `@media`
+
+No final do CSS, localize o bloco responsivo do Hero e substitua por:
+
+```css
+@media(max-width:900px){
+
+    .hero{
+        min-height:auto;
+        padding:70px 0 80px;
+    }
+
+    .hero-content{
+        grid-template-columns:1fr;
+        gap:38px;
+    }
+
+    .hero-text{
+        max-width:700px;
+    }
+
+    .hero-text h1{
+        font-size:48px;
+        letter-spacing:-1.8px;
+    }
+
+    .hero-visual{
+        min-height:350px;
+    }
+
+    .hero-card{
+        width:min(100%,360px);
+    }
+
+    .hero-floating-card{
+        right:calc(50% - 180px);
+        bottom:10px;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .hero{
+        padding:62px 0 70px;
+    }
+
+    .hero-content{
+        gap:30px;
+    }
+
+    .hero-text h1{
+        font-size:40px;
+        letter-spacing:-1.5px;
+    }
+
+    .hero-kicker{
+        font-size:.61rem;
+        letter-spacing:.8px;
+    }
+
+    .hero-text p{
+        font-size:.88rem;
+        line-height:1.65;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .hero-trust{
+        flex-direction:column;
+        gap:7px;
+    }
+
+    .hero-visual{
+        min-height:325px;
+    }
+
+    .hero-card{
+        width:100%;
+        max-width:350px;
+        padding:22px 19px;
+        transform:none;
+    }
+
+    .hero-floating-card{
+        right:50%;
+        transform:translateX(50%);
+        bottom:0;
+    }
+
+    .hero-bottom-content{
+        min-height:42px;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .hero-bottom-content > span:first-child{
+        display:none;
+    }
+}
+
+
+@media(max-width:430px){
+
+    .hero{
+        padding:55px 0 65px;
+    }
+
+    .hero-text h1{
+        font-size:36px;
+    }
+
+    .hero-text .eyebrow{
+        font-size:.61rem;
+    }
+
+    .hero-kicker{
+        font-size:.57rem;
+    }
+
+    .hero-route{
+        grid-template-columns:1fr 38px 1fr;
+    }
+
+    .hero-card-services{
+        gap:6px;
+    }
+
+    .hero-card-services span{
+        font-size:.62rem;
+        padding:8px 7px;
+    }
+
+    .hero-floating-card{
+        min-width:160px;
+        padding:9px 11px;
+    }
+}
+```
+
+**O que estamos a mudar:** de um Hero de cerca de **700px+** para aproximadamente **570px no desktop**, com título, cartão e espaçamentos menores. No telemóvel ele deixa de tentar ocupar uma altura fixa.
+
+Não mexa no `index.html` agora. **Primeiro vamos testar só este CSS.** Se ficar como estou a imaginar, a primeira tela já vai mostrar o Hero e começar a revelar a secção seguinte, dando ao site uma sensação muito mais profissional e fluida.
 
 /* ================= GENERAL SECTIONS ================= */
 
