@@ -8,720 +8,971 @@
 
     <meta
         name="description"
-        content="GOTA D´ SOL 2.0 — Viagens, Vistos, Turismo e Consultoria.">
+        content="GOTA D´ SOL 2.0 — Viagens, Vistos, Turismo e Consultoria."
+    >
+
+    <meta name="theme-color" content="#071b36">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- CABEÇALHO -->
-   <header class="header">
+    <!-- ================= HEADER ================= -->
 
-    <div class="container nav-container">
+    <header class="header" id="header">
 
-        <!-- LOGOTIPO -->
-        <a href="#inicio" class="logo">
-            <span>GOTA D´ SOL</span>
-            <small>2.0</small>
-        </a>
+        <div class="container nav-container">
 
-        <!-- MENU PRINCIPAL -->
-        <nav class="navigation" aria-label="Menu principal">
+            <a href="#inicio" class="logo" aria-label="GOTA D SOL 2.0 - Início">
 
-            <a href="#inicio" class="active">Início</a>
-            <a href="#sobre">Sobre nós</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#processo">Como funciona</a>
-            <a href="#contactos">Contactos</a>
+                <span class="logo-mark">
+                    GS
+                </span>
 
-        </nav>
+                <span class="logo-text">
+                    <strong>GOTA D´ SOL</strong>
+                    <small>2.0</small>
+                </span>
 
-        <!-- BOTÃO DE AÇÃO -->
-        <a href="#cotacao" class="btn btn-header">
-            Solicitar cotação
-        </a>
+            </a>
 
-    </div>
 
-</header>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    <!-- HERO / INÍCIO -->
-    <main>
 
-        <section id="inicio" class="hero">
+            <nav
+                class="navigation"
+                id="navigation"
+                aria-label="Menu principal"
+            >
 
-    <div class="container hero-content">
+                <a href="#inicio" class="active">Início</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#processo">Como funciona</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contactos">Contactos</a>
 
-        <div class="hero-text">
-
-            <span class="eyebrow">
-                VIAGENS • VISTOS • TURISMO • CONSULTORIA
-            </span>
-
-            <h1>
-                Viaje com confiança.
-                <span>Nós cuidamos do caminho.</span>
-            </h1>
-
-            <p>
-                Na <strong>GOTA D´ SOL 2.0</strong>, transformamos os seus
-                planos de viagem em processos organizados, claros e
-                acompanhados do início ao fim.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#cotacao" class="btn btn-primary">
+                <a href="#cotacao" class="nav-cta">
                     Solicitar cotação
                 </a>
 
-                <a href="#servicos" class="btn btn-outline">
-                    Conhecer nossos serviços
-                </a>
-
-            </div>
-
-            <div class="hero-trust">
-
-                <span>✓ Atendimento personalizado</span>
-                <span>✓ Acompanhamento do processo</span>
-                <span>✓ Soluções para a sua viagem</span>
-
-            </div>
+            </nav>
 
         </div>
 
-        <div class="hero-card">
+    </header>
 
-            <div class="hero-card-icon">
-                ✈
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+            <div class="container hero-content">
+
+                <div class="hero-copy">
+
+                    <div class="hero-eyebrow">
+                        <span></span>
+                        VIAGENS · VISTOS · TURISMO · CONSULTORIA
+                    </div>
+
+                    <p class="hero-kicker">
+                        PLANEAMENTO <b>•</b> ORGANIZAÇÃO <b>•</b> ACOMPANHAMENTO
+                    </p>
+
+                    <h1>
+                        A sua viagem
+                        <span>começa com confiança.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Na <strong>GOTA D´ SOL 2.0</strong>, ajudamos a
+                        transformar os seus planos de viagem em processos
+                        organizados, claros e acompanhados.
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a href="#cotacao" class="btn btn-primary">
+                            Solicitar cotação
+                            <span>→</span>
+                        </a>
+
+                        <a href="#servicos" class="btn btn-ghost">
+                            Explorar serviços
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-trust">
+
+                        <div>
+                            <span class="trust-icon">✓</span>
+                            Atendimento personalizado
+                        </div>
+
+                        <div>
+                            <span class="trust-icon">✓</span>
+                            Acompanhamento
+                        </div>
+
+                        <div>
+                            <span class="trust-icon">✓</span>
+                            Informação clara
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD DO HERO -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-orbit orbit-one"></div>
+                    <div class="hero-orbit orbit-two"></div>
+
+
+                    <div class="travel-card">
+
+                        <div class="travel-card-header">
+
+                            <div>
+                                <span class="card-overline">
+                                    GOTA D´ SOL 2.0
+                                </span>
+
+                                <strong>
+                                    O próximo destino
+                                </strong>
+                            </div>
+
+                            <div class="plane-icon">
+                                ✈
+                            </div>
+
+                        </div>
+
+
+                        <div class="route">
+
+                            <div class="route-place">
+
+                                <span>ORIGEM</span>
+
+                                <strong>
+                                    Angola
+                                </strong>
+
+                            </div>
+
+
+                            <div class="route-line">
+                                <i>✦</i>
+                            </div>
+
+
+                            <div class="route-place destination">
+
+                                <span>DESTINO</span>
+
+                                <strong>
+                                    Mundo
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-divider"></div>
+
+
+                        <div class="card-services">
+
+                            <span>✈ Passagens</span>
+                            <span>▣ Vistos</span>
+                            <span>⌂ Hotéis</span>
+                            <span>◆ Seguros</span>
+
+                        </div>
+
+
+                        <a href="#cotacao" class="card-link">
+                            Começar a planear
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="floating-badge">
+
+                        <div class="badge-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>
+                                Processo acompanhado
+                            </strong>
+
+                            <small>
+                                Do início ao fim
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <span class="hero-card-label">
-                GOTA D´ SOL 2.0
-            </span>
 
-            <h3>
-                O seu próximo destino
-                começa aqui.
-            </h3>
+            <div class="hero-bottom">
 
-            <p>
-                Passagens aéreas, vistos, hotéis, seguros,
-                transferes, excursões e consultoria.
-            </p>
+                <div class="container hero-bottom-content">
 
-            <a href="#cotacao" class="hero-card-link">
-                Começar a planear →
-            </a>
+                    <span>
+                        GOTA D´ SOL <b>2.0</b>
+                    </span>
 
-        </div>
+                    <span>
+                        Viaje com mais organização e tranquilidade
+                    </span>
 
-    </div>
+                    <a href="#sobre">
+                        Conheça-nos ↓
+                    </a>
 
-</section>
+                </div>
 
-        <!-- SOBRE -->
-        <section id="sobre" class="section">
+            </div>
+
+        </section>
+
+
+        <!-- ================= SOBRE ================= -->
+
+        <section class="section about-section" id="sobre">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-content">
+
+                        <span class="section-eyebrow">
+                            SOBRE A GOTA D´ SOL
+                        </span>
+
+                        <h2>
+                            Mais do que uma agência,
+                            <span>um parceiro de viagem.</span>
+                        </h2>
+
+                        <p>
+                            A <strong>GOTA D´ SOL 2.0</strong> atua nas áreas
+                            de viagens, vistos, turismo e consultoria,
+                            oferecendo acompanhamento desde o primeiro
+                            contacto até à conclusão do serviço.
+                        </p>
+
+                        <p>
+                            Trabalhamos para tornar cada etapa mais clara,
+                            organizada e simples, adaptando o atendimento
+                            às necessidades de cada cliente.
+                        </p>
+
+
+                        <a href="#cotacao" class="text-link">
+                            Falar connosco
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="about-panel">
+
+                        <div class="panel-label">
+                            O NOSSO COMPROMISSO
+                        </div>
+
+
+                        <div class="commitment">
+
+                            <div class="commitment-item">
+
+                                <span>01</span>
+
+                                <div>
+                                    <strong>
+                                        Atendimento personalizado
+                                    </strong>
+
+                                    <p>
+                                        Cada pedido é analisado de acordo
+                                        com as necessidades apresentadas.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="commitment-item">
+
+                                <span>02</span>
+
+                                <div>
+                                    <strong>
+                                        Informação clara
+                                    </strong>
+
+                                    <p>
+                                        Procuramos apresentar as informações
+                                        necessárias de forma simples e objetiva.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="commitment-item">
+
+                                <span>03</span>
+
+                                <div>
+                                    <strong>
+                                        Acompanhamento
+                                    </strong>
+
+                                    <p>
+                                        Mantemos o acompanhamento de acordo
+                                        com o serviço contratado.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVIÇOS ================= -->
+
+        <section class="section services-section" id="servicos">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <span class="eyebrow">
-                        GOTA D´ SOL 2.0
-                    </span>
-
-                    <h2>
-                        Mais do que uma agência,
-                        um parceiro de viagem.
-                    </h2>
-
-                </div>
-
-                <div class="about-grid">
-
                     <div>
 
-                        <p>
-                            A GOTA D´ SOL 2.0 atua na área de
-                            viagens, vistos, turismo e consultoria,
-                            oferecendo acompanhamento desde o
-                            primeiro contacto até à conclusão do
-                            serviço.
-                        </p>
+                        <span class="section-eyebrow">
+                            O QUE FAZEMOS
+                        </span>
 
-                        <p>
-                            O nosso compromisso é trabalhar com
-                            clareza, organização e atendimento
-                            profissional em cada etapa.
-                        </p>
+                        <h2>
+                            Soluções para
+                            <span>cada etapa da sua viagem.</span>
+                        </h2>
 
                     </div>
 
-                    <div class="about-box">
+                    <p>
+                        Da preparação à concretização, reunimos serviços
+                        que ajudam a tornar o seu planeamento mais simples
+                        e organizado.
+                    </p>
 
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+                            <span class="service-icon">✈</span>
+                            <span class="service-number">01</span>
+                        </div>
+
+                        <h3>Passagens aéreas</h3>
+
+                        <p>
+                            Pesquisa e cotação de opções de voo de acordo
+                            com o destino, datas e necessidades da viagem.
+                        </p>
+
+                        <a href="#cotacao">
+                            Solicitar cotação
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+                            <span class="service-icon">▣</span>
+                            <span class="service-number">02</span>
+                        </div>
+
+                        <h3>Vistos</h3>
+
+                        <p>
+                            Orientação sobre documentação e preparação
+                            do processo de acordo com o destino pretendido.
+                        </p>
+
+                        <a href="#cotacao">
+                            Saber mais
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+                            <span class="service-icon">⌂</span>
+                            <span class="service-number">03</span>
+                        </div>
+
+                        <h3>Hotéis</h3>
+
+                        <p>
+                            Pesquisa e reserva de alojamento de acordo
+                            com o destino, período e perfil da viagem.
+                        </p>
+
+                        <a href="#cotacao">
+                            Solicitar serviço
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+                            <span class="service-icon">◆</span>
+                            <span class="service-number">04</span>
+                        </div>
+
+                        <h3>Seguros de viagem</h3>
+
+                        <p>
+                            Soluções de seguro para proporcionar maior
+                            tranquilidade durante a sua viagem.
+                        </p>
+
+                        <a href="#cotacao">
+                            Saber mais
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+                            <span class="service-icon">➜</span>
+                            <span class="service-number">05</span>
+                        </div>
+
+                        <h3>Transferes</h3>
+
+                        <p>
+                            Apoio na organização de transferes e
+                            deslocações durante a viagem.
+                        </p>
+
+                        <a href="#cotacao">
+                            Solicitar serviço
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+                            <span class="service-icon">★</span>
+                            <span class="service-number">06</span>
+                        </div>
+
+                        <h3>Excursões e turismo</h3>
+
+                        <p>
+                            Passeios e soluções turísticas pensadas
+                            para diferentes destinos e perfis.
+                        </p>
+
+                        <a href="#cotacao">
+                            Explorar opções
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+                            <span class="service-icon">◎</span>
+                            <span class="service-number">07</span>
+                        </div>
+
+                        <h3>Consultoria</h3>
+
+                        <p>
+                            Orientação personalizada para ajudar a
+                            organizar e planear a sua viagem.
+                        </p>
+
+                        <a href="#cotacao">
+                            Falar connosco
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card featured">
+
+                        <div class="service-top">
+                            <span class="service-icon">+</span>
+                            <span class="service-number">08</span>
+                        </div>
+
+                        <h3>Soluções personalizadas</h3>
+
+                        <p>
+                            Tem uma necessidade específica?
+                            Apresente-nos o seu projeto.
+                        </p>
+
+                        <a href="#cotacao">
+                            Falar connosco
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+                <div class="services-footer">
+
+                    <div>
                         <strong>
-                            O nosso compromisso
+                            Não encontrou exatamente o que procura?
                         </strong>
 
-                        <ul>
-                            <li>Atendimento personalizado</li>
-                            <li>Informação clara</li>
-                            <li>Processos organizados</li>
-                            <li>Acompanhamento</li>
-                        </ul>
-
+                        <p>
+                            Fale connosco e explique a sua necessidade.
+                        </p>
                     </div>
 
+                    <a href="#cotacao" class="btn btn-primary">
+                        Solicitar cotação
+                        <span>→</span>
+                    </a>
+
                 </div>
 
             </div>
 
         </section>
-        <!-- SERVIÇOS -->
-        <section id="servicos" class="section section-light">
 
-    <div class="container">
 
-        <div class="section-heading center">
+        <!-- ================= PROCESSO ================= -->
 
-            <span class="eyebrow">
-                OS NOSSOS SERVIÇOS
-            </span>
-
-            <h2>
-                Tudo o que precisa para viajar melhor
-            </h2>
-
-            <p>
-                Da preparação à concretização da sua viagem,
-                a GOTA D´ SOL 2.0 oferece soluções organizadas
-                para diferentes necessidades.
-            </p>
-
-        </div>
-
-        <div class="services-grid">
-
-            <article class="service-card">
-
-                <div class="service-icon">✈</div>
-
-                <span class="service-number">01</span>
-
-                <h3>Passagens aéreas</h3>
-
-                <p>
-                    Pesquisa e cotação de opções de voo,
-                    considerando destino, datas e necessidades
-                    específicas da sua viagem.
-                </p>
-
-                <a href="#cotacao" class="service-link">
-                    Solicitar cotação →
-                </a>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">▣</div>
-
-                <span class="service-number">02</span>
-
-                <h3>Vistos</h3>
-
-                <p>
-                    Orientação sobre documentação e preparação
-                    do processo, de acordo com o serviço e destino
-                    pretendidos.
-                </p>
-
-                <a href="#cotacao" class="service-link">
-                    Saber mais →
-                </a>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">⌂</div>
-
-                <span class="service-number">03</span>
-
-                <h3>Hotéis</h3>
-
-                <p>
-                    Pesquisa e reserva de alojamento de acordo
-                    com o destino, período e perfil da sua viagem.
-                </p>
-
-                <a href="#cotacao" class="service-link">
-                    Solicitar cotação →
-                </a>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">◆</div>
-
-                <span class="service-number">04</span>
-
-                <h3>Seguros de viagem</h3>
-
-                <p>
-                    Soluções de seguro para proporcionar maior
-                    tranquilidade durante a sua viagem.
-                </p>
-
-                <a href="#cotacao" class="service-link">
-                    Saber mais →
-                </a>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">➜</div>
-
-                <span class="service-number">05</span>
-
-                <h3>Transferes</h3>
-
-                <p>
-                    Apoio na organização de transferes e
-                    deslocações para tornar a sua viagem
-                    mais simples e organizada.
-                </p>
-
-                <a href="#cotacao" class="service-link">
-                    Solicitar serviço →
-                </a>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">★</div>
-
-                <span class="service-number">06</span>
-
-                <h3>Excursões e turismo</h3>
-
-                <p>
-                    Experiências, passeios e soluções turísticas
-                    pensadas para diferentes destinos e perfis
-                    de viajantes.
-                </p>
-
-                <a href="#cotacao" class="service-link">
-                    Explorar opções →
-                </a>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">◎</div>
-
-                <span class="service-number">07</span>
-
-                <h3>Consultoria</h3>
-
-                <p>
-                    Orientação personalizada para ajudar a
-                    organizar, planear e estruturar a sua viagem
-                    com maior clareza.
-                </p>
-
-                <a href="#cotacao" class="service-link">
-                    Falar connosco →
-                </a>
-
-            </article>
-
-
-            <article class="service-card service-card-featured">
-
-                <div class="service-icon">+</div>
-
-                <span class="service-number">08</span>
-
-                <h3>Soluções personalizadas</h3>
-
-                <p>
-                    Tem uma necessidade específica?
-                    Apresente-nos o seu projeto e veremos
-                    como podemos ajudar.
-                </p>
-
-                <a href="#cotacao" class="service-link">
-                    Falar connosco →
-                </a>
-
-            </article>
-
-        </div>
-
-        <div class="services-bottom">
-
-            <p>
-                <strong>Não encontrou exatamente o que procura?</strong>
-                Fale connosco. Podemos analisar a sua necessidade
-                e apresentar uma solução adequada.
-            </p>
-
-            <a href="#cotacao" class="btn btn-primary">
-                Solicitar uma cotação
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- COMO FUNCIONA -->
-<section id="processo" class="section process-section">
-
-    <div class="container">
-
-        <div class="section-heading center">
-
-            <span class="eyebrow">
-                O NOSSO PROCESSO
-            </span>
-
-            <h2>
-                Viajar pode ser mais simples.
-            </h2>
-
-            <p>
-                Na GOTA D´ SOL 2.0, organizamos cada etapa para que
-                saiba o que fazer, o que esperar e quais são os próximos passos.
-            </p>
-
-        </div>
-        
-        <div class="steps">
-
-            <!-- PASSO 01 -->
-            <div class="step">
-
-                <div class="step-number">
-                    01
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        Conte-nos o que precisa
-                    </h3>
-
-                    <p>
-                        Entre em contacto connosco e explique o seu
-                        objetivo, destino, datas e necessidades.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- PASSO 02 -->
-            <div class="step">
-
-                <div class="step-number">
-                    02
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        Analisamos a sua necessidade
-                    </h3>
-
-                    <p>
-                        Avaliamos as informações fornecidas e identificamos
-                        as opções e serviços adequados ao seu pedido.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- PASSO 03 -->
-            <div class="step">
-
-                <div class="step-number">
-                    03
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        Receba a solução
-                    </h3>
-
-                    <p>
-                        Apresentamos as opções disponíveis, respetivas
-                        condições e informações necessárias para avançar.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- PASSO 04 -->
-            <div class="step">
-
-                <div class="step-number">
-                    04
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        Nós acompanhamos
-                    </h3>
-
-                    <p>
-                        Depois da confirmação, acompanhamos o processo
-                        de acordo com o serviço contratado até à sua conclusão.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="process-note">
-
-            <strong>
-                Cada viagem tem as suas particularidades.
-            </strong>
-
-            <span>
-                Por isso, o nosso atendimento começa por compreender
-                exatamente aquilo que precisa.
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="section section-light">
-
-    <div class="container">
-
-        <div class="section-heading center">
-
-            <span class="eyebrow">
-                PERGUNTAS FREQUENTES
-            </span>
-
-            <h2>
-                Tem alguma dúvida?
-            </h2>
-
-            <p>
-                Algumas respostas para as perguntas mais frequentes
-                sobre os nossos serviços.
-            </p>
-
-        </div>
-
-
-        <div class="faq-list">
-
-            <details class="faq-item">
-
-                <summary>
-                    A GOTA D´ SOL 2.0 trabalha com vistos?
-                </summary>
-
-                <p>
-                    Sim. Prestamos orientação e acompanhamento na
-                    preparação de processos relacionados com vistos,
-                    de acordo com o destino e o serviço pretendido.
-                </p>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Posso solicitar apenas uma passagem aérea?
-                </summary>
-
-                <p>
-                    Sim. Pode solicitar uma cotação de passagem aérea
-                    indicando o destino, as datas pretendidas e os
-                    restantes detalhes da viagem.
-                </p>
-
-            </details>
-
-            <details class="faq-item">
-
-                <summary>
-                    Também fazem reservas de hotéis?
-                </summary>
-
-                <p>
-                    Sim. Podemos pesquisar e apresentar opções de
-                    alojamento de acordo com o destino, período e
-                    perfil da sua viagem.
-                </p>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Posso pedir uma cotação pelo WhatsApp?
-                </summary>
-
-                <p>
-                    Sim. Pode entrar em contacto connosco através do
-                    WhatsApp e apresentar os detalhes da sua necessidade.
-                    A nossa equipa analisará o pedido e dará seguimento.
-                </p>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Que documentos são necessários para um processo de visto?
-                </summary>
-
-                <p>
-                    Os documentos necessários dependem do destino,
-                    do tipo de visto e da situação do viajante.
-                    Após conhecermos o seu caso, indicaremos as
-                    informações e documentos aplicáveis ao processo.
-                </p>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    A GOTA D´ SOL 2.0 garante a aprovação do visto?
-                </summary>
-
-                <p>
-                    Não. A decisão sobre a concessão de um visto pertence
-                    às autoridades competentes. O nosso papel é prestar
-                    orientação e acompanhar a preparação do processo
-                    dentro dos serviços contratados.
-                </p>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Atendem clientes de outras províncias de Angola?
-                </summary>
-
-                <p>
-                    Sim. A GOTA D´ SOL 2.0 disponibiliza atendimento
-                    para clientes em diferentes regiões de Angola,
-                    de acordo com o serviço solicitado.
-                </p>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Posso apresentar uma necessidade que não esteja na lista de serviços?
-                </summary>
-
-                <p>
-                    Sim. Se tiver uma necessidade relacionada com a sua
-                    viagem que não esteja indicada nos nossos serviços,
-                    entre em contacto connosco. Analisaremos o pedido
-                    e verificaremos como podemos ajudar.
-                </p>
-
-            </details>
-
-        </div>
-
-    </div>
-</section>
-     <!-- COTAÇÃO -->
-        <section id="cotacao" class="quote-section">
-
-            <div class="container quote-content">
-
-                <div>
-
-                    <span class="eyebrow">
-                        FALE CONNOSCO
-                    </span>
-
-                    <h2>
-                        Precisa de uma cotação?
-                    </h2>
-
-                    <p>
-                        Envie-nos os detalhes da sua viagem
-                        e entraremos em contacto consigo.
-                    </p>
-
-                </div>
-
-                <a
-                    href="https://wa.me/244000000000?text=Olá%20GOTA%20D´%20SOL%202.0,%20gostaria%20de%20solicitar%20uma%20cotação."
-                    class="btn btn-whatsapp"
-                    target="_blank"
-                >
-                    Solicitar pelo WhatsApp
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACTOS -->
-        <section id="contactos" class="section">
+        <section class="section process-section" id="processo">
 
             <div class="container">
 
                 <div class="section-heading center">
 
-                    <span class="eyebrow">
+                    <span class="section-eyebrow">
+                        COMO FUNCIONA
+                    </span>
+
+                    <h2>
+                        Simples desde o
+                        <span>primeiro contacto.</span>
+                    </h2>
+
+                    <p>
+                        Organizamos o processo para que saiba o que fazer,
+                        o que esperar e quais são os próximos passos.
+                    </p>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div>
+                            <h3>
+                                Conte-nos o que precisa
+                            </h3>
+
+                            <p>
+                                Explique o seu destino, datas, objetivo
+                                e necessidades.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div>
+                            <h3>
+                                Analisamos o pedido
+                            </h3>
+
+                            <p>
+                                Avaliamos as informações e identificamos
+                                os serviços adequados.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div>
+                            <h3>
+                                Apresentamos as opções
+                            </h3>
+
+                            <p>
+                                Receba as informações e condições
+                                necessárias para avançar.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+                        <div>
+                            <h3>
+                                Acompanhamos
+                            </h3>
+
+                            <p>
+                                Damos seguimento de acordo com o
+                                serviço contratado.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="process-note">
+
+                    <span>✦</span>
+
+                    <p>
+                        <strong>
+                            Cada viagem tem as suas particularidades.
+                        </strong>
+
+                        Por isso, começamos por compreender exatamente
+                        aquilo que precisa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FAQ ================= -->
+
+        <section class="section faq-section" id="faq">
+
+            <div class="container">
+
+                <div class="section-heading center">
+
+                    <span class="section-eyebrow">
+                        PERGUNTAS FREQUENTES
+                    </span>
+
+                    <h2>
+                        Antes de viajar,
+                        <span>tire as suas dúvidas.</span>
+                    </h2>
+
+                    <p>
+                        Algumas respostas para questões frequentes
+                        sobre os nossos serviços.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-list">
+
+                    <details class="faq-item">
+
+                        <summary>
+                            A GOTA D´ SOL 2.0 trabalha com vistos?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Sim. Prestamos orientação e acompanhamento
+                            na preparação de processos relacionados com
+                            vistos, de acordo com o destino e o serviço
+                            pretendido.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Posso solicitar apenas uma passagem aérea?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Sim. Pode solicitar uma cotação indicando
+                            o destino, as datas pretendidas e os restantes
+                            detalhes da viagem.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Também fazem reservas de hotéis?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Sim. Podemos pesquisar e apresentar opções
+                            de alojamento de acordo com o destino,
+                            período e perfil da viagem.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Posso pedir uma cotação pelo WhatsApp?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Sim. Pode entrar em contacto através do
+                            WhatsApp e apresentar os detalhes da sua
+                            necessidade.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Que documentos são necessários para um visto?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Os documentos dependem do destino, tipo de
+                            visto e situação do viajante. Após conhecermos
+                            o seu caso, indicaremos as informações aplicáveis.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            A GOTA D´ SOL 2.0 garante a aprovação do visto?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Não. A decisão sobre a concessão de um visto
+                            pertence às autoridades competentes. O nosso
+                            papel é prestar orientação e acompanhar a
+                            preparação do processo dentro dos serviços
+                            contratados.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Atendem clientes de outras províncias?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Sim. A GOTA D´ SOL 2.0 disponibiliza atendimento
+                            para clientes em diferentes regiões de Angola,
+                            de acordo com o serviço solicitado.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Posso apresentar uma necessidade específica?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Sim. Se a sua necessidade relacionada com
+                            viagens não estiver na lista, entre em contacto
+                            connosco para analisarmos o pedido.
+                        </p>
+
+                    </details>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="quote-section" id="cotacao">
+
+            <div class="quote-decoration"></div>
+
+            <div class="container quote-content">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        VAMOS PLANEAR
+                    </span>
+
+                    <h2>
+                        O seu próximo destino
+                        <span>pode começar hoje.</span>
+                    </h2>
+
+                    <p>
+                        Envie-nos os detalhes da sua viagem.
+                        A nossa equipa analisará o seu pedido
+                        e dará seguimento.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/244000000000?text=Olá%20GOTA%20D´%20SOL%202.0,%20gostaria%20de%20solicitar%20uma%20cotação."
+                    class="btn btn-whatsapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span>◉</span>
+                    Solicitar pelo WhatsApp
+                    <b>→</b>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACTOS ================= -->
+
+        <section class="section contact-section" id="contactos">
+
+            <div class="container">
+
+                <div class="section-heading center">
+
+                    <span class="section-eyebrow">
                         CONTACTOS
                     </span>
 
                     <h2>
-                        Estamos à sua disposição
+                        Estamos à sua
+                        <span>disposição.</span>
                     </h2>
 
                 </div>
@@ -729,35 +980,53 @@
 
                 <div class="contact-grid">
 
+                    <a href="https://wa.me/244000000000"
+                       class="contact-card">
+
+                        <span class="contact-icon">
+                            ◉
+                        </span>
+
+                        <div>
+                            <small>FALE CONNOSCO</small>
+                            <strong>WhatsApp</strong>
+                            <p>+244 XXX XXX XXX</p>
+                        </div>
+
+                        <span class="contact-arrow">→</span>
+
+                    </a>
+
+
+                    <a href="mailto:contacto@gotadsol.com"
+                       class="contact-card">
+
+                        <span class="contact-icon">
+                            @
+                        </span>
+
+                        <div>
+                            <small>ENVIE UMA MENSAGEM</small>
+                            <strong>E-mail</strong>
+                            <p>contacto@gotadsol.com</p>
+                        </div>
+
+                        <span class="contact-arrow">→</span>
+
+                    </a>
+
+
                     <div class="contact-card">
 
-                        <strong>WhatsApp</strong>
+                        <span class="contact-icon">
+                            ◎
+                        </span>
 
-                        <p>
-                            +244 XXX XXX XXX
-                        </p>
-
-                    </div>
-
-
-                    <div class="contact-card">
-
-                        <strong>E-mail</strong>
-
-                        <p>
-                            contacto@gotadsol.com
-                        </p>
-
-                    </div>
-
-
-                    <div class="contact-card">
-
-                        <strong>Localização</strong>
-
-                        <p>
-                            Angola
-                        </p>
+                        <div>
+                            <small>ONDE ESTAMOS</small>
+                            <strong>Localização</strong>
+                            <p>Angola</p>
+                        </div>
 
                     </div>
 
@@ -770,24 +1039,49 @@
     </main>
 
 
-    <!-- RODAPÉ -->
+    <!-- ================= WHATSAPP FLUTUANTE ================= -->
+
+    <a
+        href="https://wa.me/244000000000?text=Olá%20GOTA%20D´%20SOL%202.0,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar com a GOTA D SOL pelo WhatsApp"
+    >
+        <span>◉</span>
+    </a>
+
+
+    <!-- ================= FOOTER ================= -->
+
     <footer class="footer">
 
         <div class="container footer-content">
 
-            <div>
+            <div class="footer-brand">
 
-                <strong>
-                    GOTA D´ SOL 2.0
-                </strong>
+                <a href="#inicio" class="footer-logo">
+                    GOTA D´ SOL <small>2.0</small>
+                </a>
 
                 <p>
-                    Viagens • Vistos • Turismo • Consultoria
+                    Viagens · Vistos · Turismo · Consultoria
                 </p>
 
             </div>
 
-            <div>
+
+            <div class="footer-links">
+
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contactos">Contactos</a>
+
+            </div>
+
+
+            <div class="footer-copy">
 
                 <p>
                     © 2026 GOTA D´ SOL COMERCIO E PRESTACAO DE SERVICO
