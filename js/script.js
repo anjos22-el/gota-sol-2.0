@@ -3,59 +3,93 @@
    SCRIPT.JS
    ========================================================= */
 
-const header = document.getElementById("header");
-const menuToggle = document.getElementById("menuToggle");
-const navigation = document.getElementById("navigation");
+document.addEventListener("DOMContentLoaded", () => {
 
+    const header = document.getElementById("header");
+    const menuToggle = document.getElementById("menuToggle");
+    const navigation = document.getElementById("navigation");
 
-/* ================= HEADER SCROLL ================= */
+    /* ================= HEADER SCROLL ================= */
 
-window.addEventListener("scroll", () => {
+    const updateHeader = () => {
 
-    if (window.scrollY > 20) {
+        if (!header) return;
 
-        header.classList.add("scrolled");
+        if (window.scrollY > 20) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
 
-    } else {
+    };
 
-        header.classList.remove("scrolled");
-
-    }
-
-});
-
-
-/* ================= MOBILE MENU ================= */
-
-if (menuToggle && navigation) {
-
-    menuToggle.addEventListener("click", () => {
-
-        const isOpen =
-            navigation.classList.toggle("open");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
-
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen
-                ? "Fechar menu"
-                : "Abrir menu"
-        );
-
+    window.addEventListener("scroll", updateHeader, {
+        passive: true
     });
 
+    updateHeader();
 
-    /* Fechar menu ao clicar num link */
 
-    navigation
-        .querySelectorAll("a")
-        .forEach(link => {
+    /* ================= MOBILE MENU ================= */
 
-            link.addEventListener("click", () => {
+    if (menuToggle && navigation) {
+
+        menuToggle.addEventListener("click", (event) => {
+
+            event.stopPropagation();
+
+            const isOpen =
+                navigation.classList.toggle("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Fechar menu"
+                    : "Abrir menu"
+            );
+
+        });
+
+
+        /* Fechar menu ao clicar num link */
+
+        navigation
+            .querySelectorAll("a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    navigation.classList.remove("open");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Abrir menu"
+                    );
+
+                });
+
+            });
+
+
+        /* Fechar menu ao clicar fora */
+
+        document.addEventListener("click", (event) => {
+
+            if (
+                navigation.classList.contains("open") &&
+                !navigation.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
 
                 navigation.classList.remove("open");
 
@@ -69,108 +103,147 @@ if (menuToggle && navigation) {
                     "Abrir menu"
                 );
 
-            });
+            }
 
         });
 
-}
 
+        /* Fechar menu com ESC */
 
-/* ================= ACTIVE NAVIGATION ================= */
+        document.addEventListener("keydown", (event) => {
 
-const sections =
-    document.querySelectorAll("main section[id]");
+            if (event.key === "Escape") {
 
-const navLinks =
-    document.querySelectorAll(
-        ".navigation a[href^='#']"
-    );
+                navigation.classList.remove("open");
 
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-const updateActiveLink = () => {
-
-    let currentSection = "";
-
-    const scrollPosition =
-        window.scrollY + 140;
-
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop;
-
-        const sectionHeight =
-            section.offsetHeight;
-
-        if (
-            scrollPosition >= sectionTop &&
-            scrollPosition <
-                sectionTop + sectionHeight
-        ) {
-
-            currentSection =
-                section.getAttribute("id");
-
-        }
-
-    });
-
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (
-            link.getAttribute("href") ===
-            `#${currentSection}`
-        ) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-};
-
-
-window.addEventListener(
-    "scroll",
-    updateActiveLink
-);
-
-updateActiveLink();
-
-
-/* ================= FAQ ================= */
-
-/*
-   Permite manter apenas uma pergunta aberta
-   de cada vez.
-*/
-
-const faqItems =
-    document.querySelectorAll(".faq-item");
-
-faqItems.forEach(item => {
-
-    item.addEventListener("toggle", () => {
-
-        if (!item.open) return;
-
-        faqItems.forEach(otherItem => {
-
-            if (
-                otherItem !== item &&
-                otherItem.open
-            ) {
-
-                otherItem.removeAttribute("open");
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Abrir menu"
+                );
 
             }
 
         });
+
+    }
+
+
+    /* ================= ACTIVE NAVIGATION ================= */
+
+    const sections =
+        document.querySelectorAll(
+            "main section[id]"
+        );
+
+    const navLinks =
+        document.querySelectorAll(
+            ".navigation a[href^='#']"
+        );
+
+
+    const updateActiveLink = () => {
+
+        if (!sections.length || !navLinks.length) {
+            return;
+        }
+
+        let currentSection = "";
+
+        const scrollPosition =
+            window.scrollY + 140;
+
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition <
+                sectionTop + sectionHeight
+            ) {
+
+                currentSection =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (
+                link.getAttribute("href") ===
+                `#${currentSection}`
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    };
+
+
+    window.addEventListener(
+        "scroll",
+        updateActiveLink,
+        {
+            passive: true
+        }
+    );
+
+    updateActiveLink();
+
+
+    /* ================= FAQ ================= */
+
+    const faqItems =
+        document.querySelectorAll(
+            ".faq-item"
+        );
+
+
+    faqItems.forEach(item => {
+
+        item.addEventListener(
+            "toggle",
+            () => {
+
+                if (!item.open) {
+                    return;
+                }
+
+                faqItems.forEach(otherItem => {
+
+                    if (
+                        otherItem !== item &&
+                        otherItem.open
+                    ) {
+
+                        otherItem.removeAttribute(
+                            "open"
+                        );
+
+                    }
+
+                });
+
+            }
+        );
 
     });
 
