@@ -2451,19 +2451,17 @@ a{
     }
 
     *,
-          scroll-behavior:auto;
-    }
-
-    *,
     *::before{
         animation-duration:.01ms !important;
         animation-iteration-count:1 !important;
         transition-duration:.01ms !important;
         scroll-behavior:auto !important;
     }
-/* POSIÇÃO FINAL DO CARTÃO DO HERO */
+}
+
+/* POSIÇÃO DO CARTÃO DO HERO */
 @media (min-width:901px){
     .hero-card{
-        margin-right:-80px;
+        right:-80px;
     }
 }
