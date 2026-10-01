@@ -503,12 +503,7 @@ button{
         rgba(3,18,37,.20) 100%
     ),
     url("../images/hero-gota-sol.jpg") center center / cover no-repeat;
-        linear-gradient(
-            125deg,
-            #031225 0%,
-            #071b36 55%,
-            #103d68 100%
-        );
+      
 }
 
 /* decoração */
