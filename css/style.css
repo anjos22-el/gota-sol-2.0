@@ -2459,11 +2459,21 @@ a{
     }
 }
 
-/* POSIÇÃO FINAL DO CARTÃO DO HERO */
+/* POSICIONAMENTO DEFINITIVO DO CARTÃO */
 @media (min-width:901px){
-    .hero-card{
+    .hero-visual{
         position:relative;
-        left:110px !important;
-        right:auto !important;
+    }
+
+    .hero-card{
+        position:absolute;
+        top:50%;
+        right:-110px;
+        transform:translateY(-50%);
+        margin:0;
+    }
+
+    .hero-card:hover{
+        transform:translateY(calc(-50% - 4px));
     }
 }
