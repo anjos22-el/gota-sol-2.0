@@ -279,7 +279,42 @@ document.addEventListener("DOMContentLoaded", () => {
             action: "Falar connosco",
             featured: true
         }
-    ];
+    ];    if (servicesGrid) {
+
+        servicesGrid.innerHTML = services.map(service => `
+
+            <article class="service-card ${service.featured ? "featured" : ""}">
+
+                <div class="service-top">
+
+                    <span class="service-icon">
+                        ${service.icon}
+                    </span>
+
+                    <span class="service-number">
+                        ${service.number}
+                    </span>
+
+                </div>
+
+                <h3>
+                    ${service.title}
+                </h3>
+
+                <p>
+                    ${service.description}
+                </p>
+
+                <a href="#cotacao">
+                    ${service.action}
+                    <span>→</span>
+                </a>
+
+            </article>
+
+        `).join("");
+
+    }
     /* ================= FAQ ================= */
 
     const faqItems =
