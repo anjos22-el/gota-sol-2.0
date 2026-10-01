@@ -761,12 +761,13 @@ button{
         0 22px 50px
         rgba(0,0,0,.24);
 
-   transform:none;
+    transform:none;
 
     transition:
         transform .3s ease,
         box-shadow .3s ease;
 }
+
 .hero-card:hover{
     transform:translateY(-4px);
 
