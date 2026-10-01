@@ -552,11 +552,9 @@ button{
 
     display:grid;
 
-  grid-template-columns:
-    minmax(0,1.15fr)
-    minmax(300px,.85fr);
-    gap:55px;
-
+ grid-template-columns:
+    minmax(0,1.25fr)
+    minmax(300px,.75fr);
     align-items:center;
 }
 
@@ -2463,4 +2461,9 @@ a{
         transition-duration:.01ms !important;
         scroll-behavior:auto !important;
     }
-
+/* POSIÇÃO FINAL DO CARTÃO DO HERO */
+@media (min-width:901px){
+    .hero-card{
+        margin-right:-80px;
+    }
+}
