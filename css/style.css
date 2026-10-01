@@ -2465,9 +2465,3 @@ a{
         scroll-behavior:auto !important;
     }
 
-/* POSIÇÃO DO CARTÃO DO HERO */
-@media (min-width:901px){
-    .hero-visual{
-        transform:translateX(90px);
-    }
-}
