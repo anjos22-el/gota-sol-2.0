@@ -2460,10 +2460,10 @@ a{
         animation-iteration-count:1 !important;
         transition-duration:.01ms !important;
         scroll-behavior:auto !important;
+
 /* Ajuste do cartão do hero */
 @media (min-width:601px){
     .hero-card{
-        position:relative;
-        left:100px;
+        right:-150px;
     }
 }
