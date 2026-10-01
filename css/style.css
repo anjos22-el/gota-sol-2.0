@@ -772,7 +772,7 @@ button{
         0 22px 50px
         rgba(0,0,0,.24);
 
-    transform:none;
+    transform:translateX(35px);
 
     transition:
         transform .3s ease,
