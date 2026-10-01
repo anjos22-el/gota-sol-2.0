@@ -208,7 +208,78 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateActiveLink();
 
+    /* ================= SERVIÇOS ================= */
 
+    const servicesGrid =
+        document.querySelector(".services-grid");
+
+    const services = [
+        {
+            number: "01",
+            icon: "✈",
+            title: "Passagens aéreas",
+            description:
+                "Pesquisa e cotação de opções de voo de acordo com o destino, datas e necessidades da viagem.",
+            action: "Solicitar cotação"
+        },
+        {
+            number: "02",
+            icon: "▣",
+            title: "Vistos",
+            description:
+                "Orientação sobre documentação e preparação do processo de acordo com o destino pretendido.",
+            action: "Saber mais"
+        },
+        {
+            number: "03",
+            icon: "⌂",
+            title: "Hotéis",
+            description:
+                "Pesquisa e reserva de alojamento de acordo com o destino, período e perfil da viagem.",
+            action: "Solicitar serviço"
+        },
+        {
+            number: "04",
+            icon: "◆",
+            title: "Seguros de viagem",
+            description:
+                "Soluções de seguro para proporcionar maior tranquilidade durante a sua viagem.",
+            action: "Saber mais"
+        },
+        {
+            number: "05",
+            icon: "➜",
+            title: "Transferes",
+            description:
+                "Apoio na organização de transferes e deslocações durante a viagem.",
+            action: "Solicitar serviço"
+        },
+        {
+            number: "06",
+            icon: "★",
+            title: "Excursões e turismo",
+            description:
+                "Passeios e soluções turísticas pensadas para diferentes destinos e perfis.",
+            action: "Explorar opções"
+        },
+        {
+            number: "07",
+            icon: "◎",
+            title: "Consultoria",
+            description:
+                "Orientação personalizada para ajudar a organizar e planear a sua viagem.",
+            action: "Falar connosco"
+        },
+        {
+            number: "08",
+            icon: "+",
+            title: "Soluções personalizadas",
+            description:
+                "Tem uma necessidade específica? Apresente-nos o seu projeto.",
+            action: "Falar connosco",
+            featured: true
+        }
+    ];
     /* ================= FAQ ================= */
 
     const faqItems =
