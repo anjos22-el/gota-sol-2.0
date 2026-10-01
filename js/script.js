@@ -279,7 +279,8 @@ document.addEventListener("DOMContentLoaded", () => {
             action: "Falar connosco",message: "Olá! Tenho uma necessidade específica de viagem e gostaria de falar com a GOTA D´ SOL."
             featured: true
         }
-    ];    if (servicesGrid) {
+    ];   
+if (servicesGrid) {
 
         servicesGrid.innerHTML = services.map(service => `
 
@@ -305,10 +306,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     ${service.description}
                 </p>
 
-                <a href="#cotacao">
-                    ${service.action}
-                    <span>→</span>
-                </a>
+<a
+    href="https://wa.me/244924999736?text=${encodeURIComponent(service.message)}"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    ${service.action}
+    <span>→</span>
+</a>
 
             </article>
 
