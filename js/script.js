@@ -214,13 +214,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".services-grid");
 
     const services = [
-        {
+       {
             number: "01",
             icon: "✈",
             title: "Passagens aéreas",
             description:
-                "Pesquisa e cotação de opções de voo de acordo com o destino, datas e necessidades da viagem.",
-            action: action: "Solicitar cotação", message: "Olá! Gostaria de solicitar uma cotação de passagens aéreas."
+                 "Pesquisa e cotação de opções de voo de acordo com o destino, datas e necessidades da viagem.",
+            action: "Solicitar cotação",
+            message: "Olá! Gostaria de solicitar uma cotação de passagens aéreas."
         },
         {
             number: "02",
@@ -228,7 +229,8 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Vistos",
             description:
                 "Orientação sobre documentação e preparação do processo de acordo com o destino pretendido.",
-            action: "Saber mais", message: "Olá! Gostaria de saber mais sobre o serviço de vistos."
+            action: "Saber mais", 
+            message: "Olá! Gostaria de saber mais sobre o serviço de vistos."
         },
         {
             number: "03",
@@ -236,7 +238,8 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Hotéis",
             description:
                 "Pesquisa e reserva de alojamento de acordo com o destino, período e perfil da viagem.",
-            action: "Solicitar serviço", message: "Olá! Gostaria de solicitar ajuda para encontrar e reservar um hotel."
+            action: "Solicitar serviço", 
+            message: "Olá! Gostaria de solicitar ajuda para encontrar e reservar um hotel."
         },
         {
             number: "04",
@@ -244,7 +247,8 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Seguros de viagem",
             description:
                 "Soluções de seguro para proporcionar maior tranquilidade durante a sua viagem.",
-            action: "Saber mais", message: "Olá! Gostaria de saber mais sobre seguros de viagem."
+            action: "Saber mais", 
+            message: "Olá! Gostaria de saber mais sobre seguros de viagem."
         },
         {
             number: "05",
@@ -252,7 +256,8 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Transferes",
             description:
                 "Apoio na organização de transferes e deslocações durante a viagem.",
-            action: "Solicitar serviço", message: "Olá! Gostaria de solicitar um serviço de transfer."
+            action: "Solicitar serviço",
+            message: "Olá! Gostaria de solicitar um serviço de transfer."
         },
         {
             number: "06",
@@ -260,7 +265,8 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Excursões e turismo",
             description:
                 "Passeios e soluções turísticas pensadas para diferentes destinos e perfis.",
-            action: "Explorar opções", message: "Olá! Gostaria de saber mais sobre excursões e opções de turismo."
+            action: "Explorar opções", 
+            message: "Olá! Gostaria de saber mais sobre excursões e opções de turismo."
         },
         {
             number: "07",
@@ -268,7 +274,8 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Consultoria",
             description:
                 "Orientação personalizada para ajudar a organizar e planear a sua viagem.",
-            action: "Falar connosco", message: "Olá! Gostaria de falar com a GOTA D´ SOL sobre consultoria de viagem."
+            action: "Falar connosco", 
+            message: "Olá! Gostaria de falar com a GOTA D´ SOL sobre consultoria de viagem."
         },
         {
             number: "08",
@@ -276,7 +283,8 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Soluções personalizadas",
             description:
                 "Tem uma necessidade específica? Apresente-nos o seu projeto.",
-            action: "Falar connosco",message: "Olá! Tenho uma necessidade específica de viagem e gostaria de falar com a GOTA D´ SOL."
+            action: "Falar connosco",
+            message: "Olá! Tenho uma necessidade específica de viagem e gostaria de falar com a GOTA D´ SOL."
             featured: true
         }
     ];   
