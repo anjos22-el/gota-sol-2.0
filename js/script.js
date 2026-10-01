@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
             description:
                 "Tem uma necessidade específica? Apresente-nos o seu projeto.",
             action: "Falar connosco",
-            message: "Olá! Tenho uma necessidade específica de viagem e gostaria de falar com a GOTA D´ SOL."
+            message: "Olá! Tenho uma necessidade específica de viagem e gostaria de falar com a GOTA D´ SOL.",
             featured: true
         }
     ];   
