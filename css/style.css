@@ -735,17 +735,6 @@ button{
    CARD DO HERO
    ========================================================= */
 
-.hero-visual{
-    position:relative;
-
-    display:flex;
-
-    justify-content:flex-end;
-    align-items:center;
-
-    min-height:240px;
-}
-
 .hero-card{
     position:relative;
 
@@ -778,7 +767,6 @@ button{
         transform .3s ease,
         box-shadow .3s ease;
 }
-
 .hero-card:hover{
     transform:translateY(-4px);
 
