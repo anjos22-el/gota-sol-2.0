@@ -328,42 +328,72 @@ if (servicesGrid) {
         `).join("");
 
     }
-    /* ================= FAQ ================= */
+        /* ================= FAQ ================= */
 
-    const faqItems =
-        document.querySelectorAll(
-            ".faq-item"
-        );
+    const faqList = document.querySelector(".faq-list");
 
+    const faqs = [
+        {
+            question: "A GOTA D´ SOL 2.0 trabalha com vistos?",
+            answer: "Sim. Prestamos orientação e acompanhamento na preparação de processos relacionados com vistos, de acordo com o destino e o serviço pretendido."
+        },
+        {
+            question: "Posso solicitar apenas uma passagem aérea?",
+            answer: "Sim. Pode solicitar uma cotação indicando o destino, as datas pretendidas e os restantes detalhes da viagem."
+        },
+        {
+            question: "Também fazem reservas de hotéis?",
+            answer: "Sim. Podemos pesquisar e apresentar opções de alojamento de acordo com o destino, período e perfil da viagem."
+        },
+        {
+            question: "Posso pedir uma cotação pelo WhatsApp?",
+            answer: "Sim. Pode entrar em contacto através do WhatsApp e apresentar os detalhes da sua necessidade."
+        },
+        {
+            question: "Que documentos são necessários para um visto?",
+            answer: "Os documentos dependem do destino, tipo de visto e situação do viajante. Após conhecermos o seu caso, indicaremos as informações aplicáveis."
+        },
+        {
+            question: "A GOTA D´ SOL 2.0 garante a aprovação do visto?",
+            answer: "Não. A decisão sobre a concessão de um visto pertence às autoridades competentes. O nosso papel é prestar orientação e acompanhar a preparação do processo dentro dos serviços contratados."
+        },
+        {
+            question: "Atendem clientes de outras províncias?",
+            answer: "Sim. A GOTA D´ SOL 2.0 disponibiliza atendimento para clientes em diferentes regiões de Angola, de acordo com o serviço solicitado."
+        },
+        {
+            question: "Posso apresentar uma necessidade específica?",
+            answer: "Sim. Se a sua necessidade relacionada com viagens não estiver na lista, entre em contacto connosco para analisarmos o pedido."
+        }
+    ];
 
-    faqItems.forEach(item => {
+    if (faqList) {
+        faqList.innerHTML = faqs.map((faq) => `
+            <details class="faq-item">
 
-        item.addEventListener(
-            "toggle",
-            () => {
+                <summary>
+                    ${faq.question}
+                    <span>+</span>
+                </summary>
 
-                if (!item.open) {
-                    return;
-                }
+                <p>
+                    ${faq.answer}
+                </p>
 
-                faqItems.forEach(otherItem => {
+            </details>
+        `).join("");
 
-                    if (
-                        otherItem !== item &&
-                        otherItem.open
-                    ) {
+        const faqItems = faqList.querySelectorAll(".faq-item");
 
-                        otherItem.removeAttribute(
-                            "open"
-                        );
+        faqItems.forEach((item) => {
+            item.addEventListener("toggle", () => {
+                if (!item.open) return;
 
+                faqItems.forEach((otherItem) => {
+                    if (otherItem !== item && otherItem.open) {
+                        otherItem.removeAttribute("open");
                     }
-
                 });
-
-            }
-        );
-
-    });
-
-});
+            });
+        });
+    }
